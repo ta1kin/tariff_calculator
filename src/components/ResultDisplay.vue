@@ -3,7 +3,7 @@
       <h2>Итоговая сумма</h2>
       <p v-if="tariff && currency && period">{{ calculateTotal() }} {{ currency }}</p>
     </div>
-</template>
+  </template>
   
 <script>
   export default {
@@ -16,7 +16,7 @@
         };
         const baseRate = rates[this.tariff][this.period];
         const exchangeRate = this.currency === 'RUB' ? 1 : this.exchangeRates[this.currency];
-        return (baseRate / exchangeRate).toFixed(2);
+        return (baseRate * exchangeRate).toFixed(2);
       }
     }
   };

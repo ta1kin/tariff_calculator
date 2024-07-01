@@ -4,7 +4,12 @@
     <TariffSelector @select-tariff="setTariff"/>
     <CurrencySelector :exchange-rates="exchangeRates" @select-currency="setCurrency"/>
     <PaymentPeriodSelector @select-period="setPeriod"/>
-    <ResultDisplay :tariff="selectedTariff" :currency="selectedCurrency" :period="selectedPeriod" :exchange-rates="exchangeRates"/>
+    <ResultDisplay 
+      :tariff="selectedTariff" 
+      :currency="selectedCurrency" 
+      :period="selectedPeriod" 
+      :exchange-rates="exchangeRates"
+    />
   </div>
 </template>
 
@@ -57,7 +62,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: Arial, sans-serif;
   text-align: center;
